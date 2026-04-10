@@ -316,4 +316,342 @@ footer a:hover {
     background-color: var(--violet-fonce);
 }
 
- 
+
+
+
+
+
+ /* --- Variables & Reset --- */
+:root {
+    --violet-principal: #6C63FF;
+    --violet-fonce: #534EDD;
+    --fond-page: #F8F9FD;
+    --blanc: #ffffff;
+    --texte-noir: #333;
+    --texte-gris: #777;
+    --gris-bordure: #eeeeee;
+}
+
+body {
+    background-color: var(--fond-page);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+/* --- Titre de la Section --- */
+.realisations-title {
+    text-align: center;
+    margin: 4rem 0 3rem;
+}
+
+.realisations-title h2 {
+    color: var(--violet-principal);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.realisations-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--violet-principal);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* --- Grille de Projets --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto 5rem;
+    padding: 0 20px;
+}
+
+/* --- Style de la Carte --- */
+.project-card {
+    background-color: var(--blanc);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Image du projet */
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--violet-principal);
+}
+
+/* Contenu textuel */
+.project-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.project-content h3 {
+    color: var(--violet-principal);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.project-content p {
+    color: var(--texte-gris);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+    /* Aligne la hauteur si les textes varient */
+    min-height: 3rem; 
+}
+
+/* --- Tags (Badges) --- */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.tags span {
+    background-color: #f0efff;
+    color: var(--violet-principal);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* --- Liens (Footer de carte) --- */
+.project-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--gris-bordure);
+    background-color: #fafafa;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: var(--texte-noir);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.project-links a:hover {
+    color: var(--violet-principal);
+}
+
+/* --- Footer Social (Bas de page) --- */
+footer .social-icons img {
+    filter: brightness(0) invert(1);
+    margin: 0 12px;
+    opacity: 0.9;
+    transition: transform 0.2s;
+}
+
+footer .social-icons img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+
+
+
+
+/* --- Styles Page Passion --- */
+
+/* Bannière du haut avec dégradé */
+.passion-header {
+    text-align: center;
+    padding: 6rem 2rem 8rem; /* Plus de padding en bas pour l'effet de chevauchement */
+    background: linear-gradient(135deg, #6C63FF 0%, #534EDD 100%);
+    color: white;
+}
+
+.passion-header h1 {
+    font-size: 2.8rem;
+    color: white; /* Force le blanc sur le dégradé */
+    margin-bottom: 1rem;
+}
+
+.passion-header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Grille de cartes */
+.passion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: -4rem auto 4rem; /* Fait remonter les cartes sur la bannière */
+    padding: 0 2rem;
+}
+
+.passion-card {
+    background: white;
+    padding: 2.5rem 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(108, 99, 255, 0.1);
+}
+
+.passion-card:hover {
+    transform: translateY(-10px);
+}
+
+.passion-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.passion-card h3 {
+    color: #6C63FF;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.passion-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Citation */
+.passion-quote {
+    text-align: center;
+    margin: 5rem auto;
+    max-width: 700px;
+    padding: 0 2rem;
+}
+
+.passion-quote blockquote {
+    font-size: 1.8rem;
+    font-style: italic;
+    color: #333;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.passion-quote blockquote::before {
+    content: "“";
+    font-size: 4rem;
+    color: #6C63FF;
+    display: block;
+    margin-bottom: -20px;
+    opacity: 0.3;
+}
+
+/* Ajustement footer pour cette page */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-links img {
+    filter: brightness(0) invert(1); /* Icônes en blanc */
+}
+
+
+
+
+
+
+
+/* --- Styles Page Divertissement --- */
+
+.divertissement-header {
+    text-align: center;
+    padding: 6rem 2rem 8rem;
+    background-color: var(--violet-doux) /* Dégradé orange dynamique */
+}
+
+.divertissement-header h1 {
+    font-size: 2.8rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.divertissement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: -4rem auto 4rem;
+    padding: 0 2rem;
+}
+
+.divertissement-card {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-bottom: 5px solid transparent;
+}
+
+.divertissement-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Bordures colorées au survol pour chaque carte */
+.divertissement-card:nth-child(1):hover { border-color: #4CAF50; } /* Vert Foot */
+.divertissement-card:nth-child(2):hover { border-color: #2196F3; } /* Bleu Lecture */
+.divertissement-card:nth-child(3):hover { border-color: #E91E63; } /* Rose/Rouge Play */
+
+.div-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.divertissement-card:hover .div-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.divertissement-card h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.divertissement-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.hobbies-footer {
+    text-align: center;
+    margin: 5rem auto;
+    color: #888;
+    font-style: italic;
+    font-size: 1.1rem;
+}
